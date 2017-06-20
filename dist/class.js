@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var base_ships_1 = require("./base-ships");
+var starfighter_ts_1 = require("./starfighter.ts");
+var ship = new base_ships_1.Spacecraft('hyperdrive');
+ship.jumpIntoHyperspace();
+var falcon = new starfighter_ts_1.MillenniumFalcon();
+falcon.jumpIntoHyperspace();
+var goodForTheJob = function (ship) { return ship.cargaContainers > 2; };
+console.log("Is falcon good for the job? " + (goodForTheJob(falcon) ? 'yes' : 'no'));
